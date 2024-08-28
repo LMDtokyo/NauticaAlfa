@@ -34,27 +34,27 @@ git clone https://github.com/LMDtokyo/NauticaAlfa.git
 cd NauticaAlfa
 ```
 2.Установка зависимостей 
-npm install
+```npm install```
 3. Настройка окружения
-NODE_ENV=development
-BASE_API_URL=http://localhost:3000/api
+```NODE_ENV=development```
+```BASE_API_URL=http://localhost:3000/api```
 4. Запуск сервера разработки
-npm run dev
+```npm run dev```
 5. Сборка проекта для продакшена
-npm run build
+```npm run build```
 6. Запуск продакшн-сервера
-npm run start
+```npm run start```
 7. Docker
-docker build -t nauticaalfa .
+```docker build -t nauticaalfa .```
 Затем запустите контейнер:
 
-docker run -p 3000:3000 nauticaalfa
+```docker run -p 3000:3000 nauticaalfa```
 🔧 Разработка и деплой
 Проект настроен для работы с CI/CD, используя GitHub Actions. Внесите изменения и создайте pull request, чтобы автоматически задеплоить изменения.
 
 📝 Документация
-Nuxt 3 Documentation
-Deployment Guide
+```Nuxt 3 Documentation```
+```Deployment Guide```
 🧑‍💻 Вклад в проект
 Если вы хотите внести вклад, пожалуйста, создайте pull request или откройте issue.
 
