@@ -14,14 +14,20 @@
 
 ## 💻 Используемые технологии
 
-- **Frontend**: Vue.js, TypeScript, Tailwind CSS
-- **Backend**: Flask (Python)
-- **База данных**: SQLite, PostgreSQL, MySQL
-- **Управление состоянием**: Pinia, Vuex
-- **Анимации и эффекты**: CSS анимации, Framer Motion
-- **Управление версиями**: Git
-- **Сборка**: Vite
-- **Деплой**: Docker, GitHub Actions
+### Frontend
+
+- **Framework**: Vue.js, TypeScript
+- **Styles**: Tailwind CSS
+- **State Management**: Pinia, Vuex
+- **Build Tool**: Vite
+- **Animations**: Framer Motion, CSS Animations
+
+### Backend
+
+- **Framework**: Flask (Python)
+- **Database**: SQLite (development), PostgreSQL/MySQL (production)
+- **API**: RESTful API using Flask
+- **Deployment**: Docker, GitHub Actions
 
 ## 🛠️ Установка и запуск
 
@@ -34,21 +40,64 @@ git clone https://github.com/LMDtokyo/NauticaAlfa.git
 cd NauticaAlfa
 ```
 2.Установка зависимостей 
-```npm install```
+```bash 
+npm install
+```
+
 3. Настройка окружения
-```NODE_ENV=development```
-```BASE_API_URL=http://localhost:3000/api```
-4. Запуск сервера разработки
-```npm run dev```
-5. Сборка проекта для продакшена
-```npm run build```
-6. Запуск продакшн-сервера
-```npm run start```
-7. Docker
-```docker build -t nauticaalfa .```
+```bash
+NODE_ENV=development
+BASE_API_URL=http://localhost:3000/api
+```
+5. Запуск сервера разработки
+```bash
+npm run dev
+```
+7. Сборка проекта для продакшена
+```bash
+npm run build
+```
+9. Запуск продакшн-сервера
+```bash
+npm run start
+```
+11. Docker
+```bash
+docker build -t nauticaalfa .
+```
 Затем запустите контейнер:
 
-```docker run -p 3000:3000 nauticaalfa```
+```bash
+docker run -p 3000:3000 nauticaalfa
+```
+
+Backend
+
+
+
+```bash
+cd pirateworld-server-master
+python3 -m venv venv
+source venv/bin/activate   # On Windows: venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+3. Настройка окружения
+
+```bash
+DATABASE_URL="sqlite:///pirateworld.db"
+SECRET_KEY="your-secret-key"
+```
+Сервер будет доступен по адресу http://127.0.0.1:5000/
+```bash
+flask run
+```
+5. Сборка проекта для продакшена
+```bash
+docker build -t pirateworld-server .
+docker run -d -p 5000:5000 pirateworld-server
+```
+
 🔧 Разработка и деплой
 Проект настроен для работы с CI/CD, используя GitHub Actions. Внесите изменения и создайте pull request, чтобы автоматически задеплоить изменения.
 
